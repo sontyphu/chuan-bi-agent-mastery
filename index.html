@@ -480,8 +480,19 @@ Tôi đồng ý cho bạn đọc mạng ở đúng đường dẫn trên và ghi
       <div class="kiem"><p><strong>Kiểm bằng:</strong> AI báo lại đường dẫn đầy đủ của tệp, kết thúc bằng <code>giao-viec-ai\SKILL.md</code>, kèm câu lệnh gọi skill.</p></div>
       <p>Kho công khai <a href="https://github.com/sontyphu/skill-giao-viec-ai" target="_blank" rel="noopener">github.com/sontyphu/skill-giao-viec-ai</a>, bạn mở xem nội dung bất cứ lúc nào.</p>
 
-      <h3>Việc 2: Kiểm tra công cụ đã nhận skill</h3>
-      <p>Tắt hẳn công cụ AI rồi mở lại, để nó nạp skill mới. Mở đúng thư mục làm việc.</p>
+      <h3>Việc 2: Tắt hẳn app rồi mở lại</h3>
+      <p>AI báo cài xong thì tắt hẳn app AI, để lần mở sau app nạp skill mới. Bấm dấu X đóng cửa sổ là chưa đủ, vì app vẫn chạy ngầm.</p>
+      <ol class="steps">
+        <li><p>Nhìn xuống góc dưới bên phải màn hình, chỗ khay đồng hồ. Bấm mũi tên nhỏ hướng lên nếu chưa thấy biểu tượng app.</p></li>
+        <li><p>Bấm chuột phải vào biểu tượng app AI, chọn <strong>Quit</strong> (hoặc Thoát). Máy Mac thì bấm vào app rồi nhấn Command và Q.</p></li>
+        <li><p>Mở lại app, chọn đúng thư mục làm việc ở Bước 3.</p></li>
+      </ol>
+      <div data-tool="claude" hidden>
+        <figure><img src="anh/image58.jpg" width="380" height="285" alt="Menu chuột phải biểu tượng Claude dưới khay đồng hồ, có mục Quit" loading="lazy"></figure>
+      </div>
+      <div class="kiem"><p><strong>Kiểm bằng:</strong> app mở lại, đang ở đúng thư mục làm việc.</p></div>
+
+      <h3>Việc 3: Kiểm tra app đã nhận skill</h3>
       <div data-tool="claude" hidden>
         <p>Gõ riêng dấu <code>/</code> vào ô nhắn, chưa bấm gửi. Danh sách skill đang có sẽ hiện ra.</p>
         <div class="anh-thieu"><b>Ảnh cần chụp</b>Danh sách skill hiện ra khi gõ dấu gạch chéo trong Claude, có dòng giao-viec-ai.</div>
@@ -490,9 +501,9 @@ Tôi đồng ý cho bạn đọc mạng ở đúng đường dẫn trên và ghi
         <p>Gõ riêng dấu <code>$</code> vào ô nhắn, chưa bấm gửi. Danh sách skill đang có sẽ hiện ra.</p>
         <div class="anh-thieu"><b>Ảnh cần chụp</b>Danh sách skill hiện ra khi gõ dấu đô la trong Codex, có dòng giao-viec-ai.</div>
       </div>
-      <div class="kiem"><p><strong>Kiểm bằng:</strong> thấy dòng <code>giao-viec-ai</code> trong danh sách. Không thấy thì xem mục sửa lỗi ngay dưới Việc 3.</p></div>
+      <div class="kiem"><p><strong>Kiểm bằng:</strong> thấy dòng <code>giao-viec-ai</code> trong danh sách. Không thấy thì xem mục sửa lỗi ngay dưới Việc 4.</p></div>
 
-      <h3>Việc 3: Gọi skill chạy thử</h3>
+      <h3>Việc 4: Gọi skill chạy thử</h3>
       <p>Gửi câu dưới đây vào ô nhắn.</p>
       <div data-tool="claude" hidden>
         <pre><code>/giao-viec-ai viết lại yêu cầu này cho rõ: làm slide chuyên nghiệp hơn</code></pre>
@@ -505,7 +516,7 @@ Tôi đồng ý cho bạn đọc mạng ở đúng đường dẫn trên và ghi
 
       <h3>Gọi skill mà AI không nhận, hoặc làm luôn không trình bản xác nhận</h3>
       <ol class="steps">
-        <li><p><strong>Chưa tắt hẳn app.</strong> Thoát hẳn công cụ AI rồi mở lại. Đóng cửa sổ thôi là chưa đủ.</p></li>
+        <li><p><strong>Chưa tắt hẳn app.</strong> Làm lại Việc 2: chuột phải biểu tượng app ở góc dưới bên phải màn hình, chọn Quit, rồi mở lại.</p></li>
         <li><p><strong>Tệp nằm sai chỗ.</strong> Hỏi AI: "Kiểm tra giúp tôi tệp SKILL.md của skill giao-viec-ai đang nằm ở đâu, có đúng thư mục skills cá nhân của công cụ này không." Nằm sai chỗ thì nhờ nó chuyển sang đúng chỗ.</p></li>
         <li><p><strong>Tệp tải về bị sửa.</strong> Hỏi AI: "Mở tệp SKILL.md của skill giao-viec-ai, cho tôi xem dòng đầu có đúng là --- và dòng thứ hai có đúng name: giao-viec-ai không." Sai thì dán lại khối câu giao việc ở Việc 1 để cài lại.</p></li>
         <li><p><strong>Gõ nhầm ký hiệu.</strong> Claude gọi bằng <code>/</code>, Codex gọi bằng <code>$</code>. Gõ nhầm ký hiệu của công cụ kia thì AI không hiểu đó là lệnh gọi skill.</p></li>
