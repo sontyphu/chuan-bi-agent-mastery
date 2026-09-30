@@ -189,7 +189,7 @@ footer{border-top:1px solid var(--line);background:var(--soft);padding:28px 24px
       <h2>Học xong chương này bạn làm được</h2>
       <ul>
         <li>Có một công cụ AI đã cài trên máy, đăng nhập xong, đọc được tệp trong một thư mục bạn chỉ định.</li>
-        <li>Đã cài skill đầu tiên vào máy và gọi nó chạy đúng.</li>
+        <li>Đã cài skill đầu tiên vào máy và biết nó giúp gì khi giao việc cho AI.</li>
         <li>Biết cách kiểm công cụ AI đã nhận skill hay chưa, trước khi tự viết skill của mình ở Chương 1.</li>
       </ul>
       <div class="callout">
@@ -454,7 +454,20 @@ footer{border-top:1px solid var(--line);background:var(--soft);padding:28px 24px
 
     <section id="cai-skill">
       <h2>Cài skill đầu tiên<span class="thoiluong">10 phút</span></h2>
-      <p>Bạn sẽ cài skill <code>giao-viec-ai</code>, một skill tôi dùng thật trong công việc của mình. Nó làm việc này: bạn giao một việc, AI hiểu ý bạn trước, chưa rõ thì hỏi lại, rồi trình bản xác nhận ghi rõ sẽ làm gì và giao ra cái gì. Bạn đồng ý thì nó mới bắt tay làm.</p>
+      <p>Bạn sẽ cài skill <code>giao-viec-ai</code>, một skill tôi dùng thật trong công việc của mình.</p>
+
+      <h3>Skill này giúp gì khi bạn giao việc cho AI</h3>
+      <p>Giao việc cho AI hay hỏng ở một chỗ: bạn nói một câu ngắn, AI tự đoán ý rồi làm luôn. Làm xong mới thấy lệch, bạn phải sửa đi sửa lại nhiều vòng.</p>
+      <p>Skill <code>giao-viec-ai</code> chặn đúng chỗ đó. Khi bạn gọi skill kèm một việc, AI làm ba điều trước khi bắt tay:</p>
+      <ol>
+        <li><strong>Hiểu ý bạn.</strong> Xác định việc gì, làm để đạt mục tiêu gì, cần giao ra cái gì, thế nào là đạt.</li>
+        <li><strong>Hỏi lại chỗ chưa rõ.</strong> Chỉ hỏi những điều cơ bản, quan trọng nhất, mỗi câu một ý. Điều nhỏ không cần hỏi thì AI ghi thành giả định để bạn nhìn thấy.</li>
+        <li><strong>Trình bản xác nhận.</strong> Gồm Tên việc, Mục tiêu, Yêu cầu thực hiện, Đầu ra cần bàn giao, Tiêu chuẩn đạt. AI dừng lại hỏi bạn có đồng ý không. Bạn đồng ý thì AI mới làm, muốn sửa thì AI sửa bản xác nhận và trình lại.</li>
+      </ol>
+      <p>Tác dụng lớn nhất là biến yêu cầu mơ hồ thành tiêu chuẩn cụ thể. Bạn nói "làm slide chuyên nghiệp hơn", bản xác nhận sẽ ghi: rút gọn chữ, mỗi slide một thông điệp, đồng bộ màu, font và bố cục, thêm hình ảnh hoặc sơ đồ. Đọc bản xác nhận là bạn biết AI sẽ làm gì và giao ra cái gì, nên AI làm đúng ngay từ đầu, bớt sửa nhiều vòng.</p>
+      <p data-tool="claude" hidden>Khi cần giao việc, gõ <code>/giao-viec-ai</code> rồi viết tiếp việc bạn muốn giao.</p>
+      <p data-tool="codex" hidden>Khi cần giao việc, gõ <code>$giao-viec-ai</code> rồi viết tiếp việc bạn muốn giao.</p>
+
       <p>Bạn không phải tự tạo thư mục hay tệp. Bạn dán một câu giao việc, AI tải skill về và đặt vào đúng chỗ.</p>
 
       <h3>Việc 1: Đưa link kho cho AI</h3>
@@ -504,28 +517,18 @@ Tôi đồng ý cho bạn đọc mạng ở đúng đường dẫn trên và ghi
         <p>Gõ dấu <code>$</code> vào ô nhắn rồi gõ tiếp vài chữ đầu tên skill, ví dụ <code>$giao viec</code>, chưa bấm gửi. Skill khớp tên hiện ra phía trên ô nhắn, Codex ghi tên thành Giao Viec Ai.</p>
         <figure><img src="anh/cai-skill-go-lenh-codex.jpg" width="506" height="230" alt="Gõ $giao viec trong Codex, hiện dòng Giao Viec Ai kèm mô tả skill" loading="lazy"></figure>
       </div>
-      <div class="kiem"><p><strong>Kiểm bằng:</strong> thấy dòng <code>giao-viec-ai</code> trong danh sách (Codex ghi là Giao Viec Ai). Không thấy thì xem mục sửa lỗi ngay dưới Việc 4.</p></div>
+      <div class="kiem"><p><strong>Kiểm bằng:</strong> thấy dòng <code>giao-viec-ai</code> trong danh sách (Codex ghi là Giao Viec Ai). Không thấy thì xem mục sửa lỗi ngay bên dưới.</p></div>
 
-      <h3>Việc 4: Gọi skill chạy thử</h3>
-      <p>Gửi câu dưới đây vào ô nhắn.</p>
-      <div data-tool="claude" hidden>
-        <pre><code>/giao-viec-ai viết lại yêu cầu này cho rõ: làm slide chuyên nghiệp hơn</code></pre>
-      </div>
-      <div data-tool="codex" hidden>
-        <pre><code>$giao-viec-ai viết lại yêu cầu này cho rõ: làm slide chuyên nghiệp hơn</code></pre>
-      </div>
-      <div class="kiem"><p><strong>Kiểm bằng:</strong> AI hỏi lại bạn những điều còn thiếu, hoặc trình bản xác nhận đủ các mục Tên việc, Mục tiêu, Yêu cầu thực hiện, Đầu ra cần bàn giao, Tiêu chuẩn đạt, rồi dừng lại hỏi bạn có đồng ý để bắt đầu làm không. Nó dừng chờ bạn thay vì làm luôn, nghĩa là skill đã chạy.</p></div>
-
-      <h3>Gọi skill mà AI không nhận, hoặc làm luôn không trình bản xác nhận</h3>
+      <h3>Không thấy skill trong danh sách</h3>
       <ol class="steps">
         <li data-tool="claude" hidden><p><strong>Chưa tắt hẳn app.</strong> Làm lại Việc 2: chuột phải biểu tượng Claude ở góc dưới bên phải màn hình, chọn Exit, rồi mở lại.</p></li>
         <li><p><strong>Tệp nằm sai chỗ.</strong> Hỏi AI: "Kiểm tra giúp tôi tệp SKILL.md của skill giao-viec-ai đang nằm ở đâu, có đúng thư mục skills cá nhân của công cụ này không." Nằm sai chỗ thì nhờ nó chuyển sang đúng chỗ.</p></li>
         <li><p><strong>Tệp tải về bị sửa.</strong> Hỏi AI: "Mở tệp SKILL.md của skill giao-viec-ai, cho tôi xem dòng đầu có đúng là --- và dòng thứ hai có đúng name: giao-viec-ai không." Sai thì dán lại khối câu giao việc ở Việc 1 để cài lại.</p></li>
-        <li><p><strong>Gõ nhầm ký hiệu.</strong> Claude gọi bằng <code>/</code>, Codex gọi bằng <code>$</code>. Gõ nhầm ký hiệu của công cụ kia thì AI không hiểu đó là lệnh gọi skill.</p></li>
+        <li><p><strong>Gõ nhầm ký hiệu.</strong> Claude gọi bằng <code>/</code>, Codex gọi bằng <code>$</code>. Gõ nhầm ký hiệu của công cụ kia thì danh sách skill không hiện ra.</p></li>
       </ol>
 
       <div class="callout">
-        <p>Cài xong skill và gọi chạy được là bạn đã sẵn sàng. Xong thì vào học Chương 1.</p>
+        <p>Cài xong skill và thấy nó trong danh sách là bạn đã sẵn sàng. Xong thì vào học Chương 1.</p>
       </div>
     </section>
 
