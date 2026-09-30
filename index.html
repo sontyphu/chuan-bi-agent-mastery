@@ -192,7 +192,7 @@ footer{border-top:1px solid var(--line);background:var(--soft);padding:28px 24px
       <ul>
         <li>Có một công cụ AI đã cài trên máy, đăng nhập xong, đọc được tệp trong một thư mục bạn chỉ định.</li>
         <li>Đã cài skill đầu tiên vào máy và gọi nó chạy đúng.</li>
-        <li>Mở được tệp <code>SKILL.md</code> ra xem, biết một skill trông như thế nào trước khi tự viết skill của mình ở Chương 1.</li>
+        <li>Biết cách kiểm công cụ AI đã nhận skill hay chưa, trước khi tự viết skill của mình ở Chương 1.</li>
       </ul>
       <div class="callout">
         <p><strong>Chưa từng tự cài phần mềm bao giờ cũng không sao.</strong> Việc ở đây chủ yếu là: mở trang web, bấm nút tải, mở tệp vừa tải rồi bấm tiếp tục cho tới hết. Chỗ nào cần gõ chữ thì đã có sẵn để bạn chép và dán.</p>
@@ -480,24 +480,25 @@ Tôi đồng ý cho bạn đọc mạng ở đúng đường dẫn trên và ghi
       <div class="kiem"><p><strong>Kiểm bằng:</strong> AI báo lại đường dẫn đầy đủ của tệp, kết thúc bằng <code>giao-viec-ai\SKILL.md</code>, kèm câu lệnh gọi skill.</p></div>
       <p>Kho công khai <a href="https://github.com/sontyphu/skill-giao-viec-ai" target="_blank" rel="noopener">github.com/sontyphu/skill-giao-viec-ai</a>, bạn mở xem nội dung bất cứ lúc nào.</p>
 
-      <h3>Việc 2: Mở tệp ra xem</h3>
-      <p>Mở thư mục AI vừa báo, bấm chuột phải vào tệp <code>SKILL.md</code>, chọn mở bằng Notepad (Mac: TextEdit).</p>
-      <p>Nhìn qua cấu trúc: phần giữa hai dòng <code>---</code> ở đầu là <strong>tên và khi nào dùng</strong>, phần bên dưới là <strong>các bước và luật</strong> AI phải theo. Chương 1 bạn sẽ viết một tệp giống hệt cấu trúc này cho công việc của chính bạn.</p>
-      <p>Thư mục <code>.claude</code> hoặc <code>.agents</code> có dấu chấm đầu tên nên máy có thể ẩn đi. Không thấy thì dán thẳng đường dẫn AI báo vào thanh địa chỉ của cửa sổ thư mục.</p>
-      <div class="anh-thieu"><b>Ảnh cần chụp</b>Tệp SKILL.md mở bằng Notepad, thấy phần đầu tệp có dòng name: giao-viec-ai.</div>
-      <div class="kiem"><p><strong>Kiểm bằng:</strong> mở được tệp, thấy dòng <code>name: giao-viec-ai</code> ở đầu.</p></div>
-
-      <h3>Việc 3: Gọi skill chạy thử</h3>
-      <p>Tắt hẳn công cụ AI rồi mở lại, để nó nạp skill mới. Mở đúng thư mục làm việc, rồi gửi câu dưới đây.</p>
+      <h3>Việc 2: Kiểm tra công cụ đã nhận skill</h3>
+      <p>Tắt hẳn công cụ AI rồi mở lại, để nó nạp skill mới. Mở đúng thư mục làm việc.</p>
       <div data-tool="claude" hidden>
-        <pre><code>/giao-viec-ai viết lại yêu cầu này cho rõ: làm slide chuyên nghiệp hơn</code></pre>
-        <p>Mẹo: gõ riêng dấu <code>/</code> vào ô nhắn là hiện danh sách skill đang có. Thấy <code>giao-viec-ai</code> trong danh sách nghĩa là công cụ đã nhận skill.</p>
+        <p>Gõ riêng dấu <code>/</code> vào ô nhắn, chưa bấm gửi. Danh sách skill đang có sẽ hiện ra.</p>
         <div class="anh-thieu"><b>Ảnh cần chụp</b>Danh sách skill hiện ra khi gõ dấu gạch chéo trong Claude, có dòng giao-viec-ai.</div>
       </div>
       <div data-tool="codex" hidden>
-        <pre><code>$giao-viec-ai viết lại yêu cầu này cho rõ: làm slide chuyên nghiệp hơn</code></pre>
-        <p>Mẹo: gõ riêng dấu <code>$</code> vào ô nhắn là hiện danh sách skill đang có. Thấy <code>giao-viec-ai</code> trong danh sách nghĩa là công cụ đã nhận skill.</p>
+        <p>Gõ riêng dấu <code>$</code> vào ô nhắn, chưa bấm gửi. Danh sách skill đang có sẽ hiện ra.</p>
         <div class="anh-thieu"><b>Ảnh cần chụp</b>Danh sách skill hiện ra khi gõ dấu đô la trong Codex, có dòng giao-viec-ai.</div>
+      </div>
+      <div class="kiem"><p><strong>Kiểm bằng:</strong> thấy dòng <code>giao-viec-ai</code> trong danh sách. Không thấy thì xem mục sửa lỗi ngay dưới Việc 3.</p></div>
+
+      <h3>Việc 3: Gọi skill chạy thử</h3>
+      <p>Gửi câu dưới đây vào ô nhắn.</p>
+      <div data-tool="claude" hidden>
+        <pre><code>/giao-viec-ai viết lại yêu cầu này cho rõ: làm slide chuyên nghiệp hơn</code></pre>
+      </div>
+      <div data-tool="codex" hidden>
+        <pre><code>$giao-viec-ai viết lại yêu cầu này cho rõ: làm slide chuyên nghiệp hơn</code></pre>
       </div>
       <div class="anh-thieu"><b>Ảnh cần chụp</b>Bản xác nhận skill trả về, thấy đủ các mục Tên việc, Mục tiêu, Yêu cầu thực hiện, Đầu ra cần bàn giao, Tiêu chuẩn đạt và câu hỏi xin phép bắt đầu.</div>
       <div class="kiem"><p><strong>Kiểm bằng:</strong> AI hỏi lại bạn những điều còn thiếu, hoặc trình bản xác nhận đủ các mục Tên việc, Mục tiêu, Yêu cầu thực hiện, Đầu ra cần bàn giao, Tiêu chuẩn đạt, rồi dừng lại hỏi bạn có đồng ý để bắt đầu làm không. Nó dừng chờ bạn thay vì làm luôn, nghĩa là skill đã chạy.</p></div>
@@ -506,7 +507,7 @@ Tôi đồng ý cho bạn đọc mạng ở đúng đường dẫn trên và ghi
       <ol class="steps">
         <li><p><strong>Chưa tắt hẳn app.</strong> Thoát hẳn công cụ AI rồi mở lại. Đóng cửa sổ thôi là chưa đủ.</p></li>
         <li><p><strong>Tệp nằm sai chỗ.</strong> Hỏi AI: "Kiểm tra giúp tôi tệp SKILL.md của skill giao-viec-ai đang nằm ở đâu, có đúng thư mục skills cá nhân của công cụ này không." Nằm sai chỗ thì nhờ nó chuyển sang đúng chỗ.</p></li>
-        <li><p><strong>Tệp tải về bị sửa.</strong> Mở tệp xem dòng đầu tiên có đúng là <code>---</code> và dòng thứ hai có đúng <code>name: giao-viec-ai</code> không. Sai thì dán lại hai dòng ở Việc 1 để cài lại.</p></li>
+        <li><p><strong>Tệp tải về bị sửa.</strong> Hỏi AI: "Mở tệp SKILL.md của skill giao-viec-ai, cho tôi xem dòng đầu có đúng là --- và dòng thứ hai có đúng name: giao-viec-ai không." Sai thì dán lại khối câu giao việc ở Việc 1 để cài lại.</p></li>
         <li><p><strong>Gõ nhầm ký hiệu.</strong> Claude gọi bằng <code>/</code>, Codex gọi bằng <code>$</code>. Gõ nhầm ký hiệu của công cụ kia thì AI không hiểu đó là lệnh gọi skill.</p></li>
       </ol>
 
